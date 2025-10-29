@@ -1,0 +1,189 @@
+/* TAMBAHKAN CLASS INI DI BAGIAN ATAS */
+.aboutPage {
+  background-color: #f9fafb; /* Warna abu-abu yang sangat terang */
+  padding: 2rem 0;
+}
+
+/* UBAH MARGIN PADA CLASS INI */
+.pageWrapper {
+  max-width: 1200px;
+  margin: 0 auto; /* Hapus margin atas/bawah, atur oleh .aboutPage */
+  padding: 0 2rem;
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--text-dark);
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-gray);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.backButton:hover {
+  color: var(--text-dark);
+}
+
+.backButton i {
+  transition: transform 0.2s ease;
+}
+
+.backButton:hover i {
+  transform: translateX(-3px); /* Efek panah sedikit bergerak saat hover */
+}
+
+/* --- Grid Gambar Atas --- */
+.imageGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Kolom kiri 2x lebih besar dari kanan */
+  gap: 1rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  height: 450px; /* Beri ketinggian tetap */
+}
+.mainImageContainer, .subImageContainer {
+  overflow: hidden;
+  border-radius: 16px;
+}
+.mainImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.subImageContainer {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+.subImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Konten Utama (Dua Kolom) --- */
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr; /* Kolom kanan 2.5x lebih besar */
+  gap: 3rem;
+  align-items: start;
+}
+
+/* --- Sidebar (Kolom Kiri) --- */
+.sidebar {
+  background-color: var(--primary-color); /* Warna biru seperti contoh */
+  color: var(--bg-light);
+  padding: 2rem;
+  border-radius: 16px;
+  position: sticky; /* Membuatnya "mengambang" saat scroll */
+  top: 2rem;
+}
+
+.sidebar a {
+  color: var(--bg-light);
+  text-decoration: underline;
+}
+
+.sidebar li {
+  padding: 1rem 0;
+  /* Ganti warna border agar lebih lembut */
+  border-top: 1px solid rgba(255, 241, 228, 0.2); /* Sebelumnya: rgba(255, 255, 255, 0.3) */
+}
+
+.sidebar h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.sidebar p {
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+.sidebar li {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.sidebar li span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.sidebar li a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* --- Area Konten (Kolom Kanan) --- */
+.contentArea {
+  padding-top: 1rem;
+}
+.mainTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-gray);
+  margin-bottom: 2.5rem;
+}
+.subSection {
+  margin-bottom: 2.5rem;
+}
+.subSectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.subSectionHeader .icon {
+  font-size: 1.5rem;
+}
+.subSectionHeader h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+.list {
+  padding-left: 1.5rem;
+  line-height: 1.9;
+  color: var(--text-gray);
+}
+.list li {
+  margin-bottom: 0.75rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .mainContent {
+    grid-template-columns: 1fr; /* Tumpuk kolom di layar medium */
+  }
+  .sidebar {
+    position: static; /* Hentikan efek sticky di mobile */
+  }
+}
+@media (max-width: 768px) {
+  .imageGrid {
+    grid-template-columns: 1fr; /* Tumpuk gambar di layar kecil */
+    height: auto;
+  }
+  .subImageContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}

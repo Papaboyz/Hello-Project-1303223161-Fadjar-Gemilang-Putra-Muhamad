@@ -1,0 +1,400 @@
+.homePageWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.mainContent {
+  display: flex;
+  flex-grow: 1;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  background-color: var(--bg-white);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+}
+
+.sidebar h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cafeItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cafeItem:hover {
+  background-color: var(--bg-light);
+}
+
+.cafeItem img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cafeInfo h4 {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  margin: 0 0 0.25rem;
+}
+
+.cafeInfo p {
+  font-size: 0.8rem;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+.mapArea {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-white);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.mapHeader {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo i {
+  color: var(--primary-color);
+}
+
+/* .searchBar {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  width: 300px;
+} */
+
+.searchBar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  color: var(--text-dark);
+}
+
+.searchBar button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--text-gray);
+}
+
+.mapContainer {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.popupCard {
+  width: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.popupImage {
+  width: 100%;
+  max-height: 150px;
+  padding: 20px 0;
+  object-fit: cover;
+  display: block;
+  box-sizing: border-box;
+}
+
+.popupContent {
+  padding: 15px 15px 20px;
+  text-align: left;
+}
+
+.popupContent h4 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.popupContent p {
+  margin: 0 0 15px 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.popupRating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.noReviews {
+  font-style: italic;
+  color: #888;
+}
+
+.popupBtn {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.popupBtn:hover {
+  background-color: var(--primary-color-darker);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-content {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px 15px !important;
+}
+.my-location-popup .leaflet-popup-content-wrapper {
+  border-radius: 8px;
+  padding: 0;
+}
+
+/* Menghilangkan panah HANYA untuk popup lokasi pengguna */
+.my-location-popup .leaflet-popup-tip {
+  display: none;
+}
+:global(.leaflet-popup-close-button) {
+  display: none !important;
+}
+
+:global(.leaflet-popup-tip) {
+  display: none;
+}
+
+.searchContainer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.searchResults {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+}
+
+.searchResultItem {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.searchResultItem:hover {
+  background-color: #f0f2f5;
+}
+
+/* Untuk tombol toggle di sidebar */
+.sidebarToggle {
+  display: flex;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.sidebarToggle button {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.sidebarToggle button.active {
+  background-color: var(--primary-color, #8d5b4c);
+  color: white;
+}
+
+/* Untuk tombol di popup */
+.popupActions {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.favoriteBtn,
+.favoritedBtn {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1.2rem;
+  line-height: 1;
+  flex-grow: 0;
+}
+
+.favoriteBtn {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.favoriteBtn:hover {
+  background-color: #dee2e6;
+}
+
+.favoritedBtn {
+  background-color: #fdecec;
+  color: #dc3545;
+}
+.detailsBtn {
+  background-color: var(--primary-color, #8d5b4c);
+  color: white;
+  flex-grow: 1;
+}
+
+.locateButton:hover {
+  background-color: #4cae4c; /* Hijau lebih gelap saat hover */
+}
+
+.locateButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 174, 76, 0.5); /* Efek fokus */
+}
+
+.pulsatingDot {
+  width: 20px;
+  height: 20px;
+  background-color: #007bff;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 rgba(0, 123, 255, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
+.locationPopup {
+  font-weight: 600;
+  text-align: center;
+}
+
+.locateControlContainer {
+  position: absolute;
+  top: 70px;
+  left: 12px;
+  z-index: 1000;
+}
+
+.locateButton {
+  width: 30px; /* Samakan dengan lebar tombol zoom */
+  height: 30px; /* Samakan dengan tinggi tombol zoom */
+  background-color: #6d4c41;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-top: 10px; /* Posisikan di bawah tombol zoom out */
+}
+
+.locateButton:hover {
+  background-color: #4e342e;
+}
+
+.locateButton img {
+  width: 25px; /* Ukuran ikon di dalam tombol */
+  height: 25px;
+}

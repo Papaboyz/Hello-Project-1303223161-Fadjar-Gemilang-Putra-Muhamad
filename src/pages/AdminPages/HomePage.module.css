@@ -1,0 +1,221 @@
+.homePageWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.mainContent {
+  display: flex;
+  flex-grow: 1;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+.sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow-y: auto;
+}
+.sidebar h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.mapArea {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+  position: relative;
+}
+.mapContainer {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.adminActions {
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+.addLocationBtn {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #6d4c41;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.addLocationBtn:hover {
+  background-color: #503932;
+}
+.instructionText {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+
+.mapHeader {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+.searchContainer {
+  flex-grow: 1; 
+  display: flex; 
+  justify-content: center;
+  position: relative; 
+}
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.searchBar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  color: var(--text-dark);
+}
+
+.searchBar button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--text-gray);
+}
+
+.searchResults {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+.searchResultItem {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.searchResultItem:hover {
+  background-color: #f0f2f5;
+}
+
+.popupCard {
+  width: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: system-ui, sans-serif;
+}
+.popupImage {
+  width: 100%;
+  max-height: 150px;
+  padding: 20px 0;
+  object-fit: cover;
+  display: block;
+  box-sizing: border-box;
+}
+.popupContent {
+  padding: 15px 15px 20px;
+  text-align: left;
+}
+.popupContent h4 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+.popupContent p {
+  margin: 0 0 15px 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+.popupActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.popupBtn {
+  flex-grow: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  background-color: #6d4c41; 
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.popupBtnFull {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #6c757d;
+  border-radius: 6px;
+  background-color: #6d4c41;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.popupBtn:hover {
+  background-color: #503932;
+}
+
+.editBtn {
+  background-color: #6d4c41; /* Kuning */
+}
+.editBtn:hover {
+  background-color: #503932;
+}
+.deleteBtn {
+  background-color: #6d4c41;
+}
+.deleteBtn:hover {
+  background-color: #503932;
+}
+.popupRating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.popupRating span:first-child {
+  font-weight: bold;
+}
+
+.noReviews {
+  font-style: italic;
+  color: #888;
+}
